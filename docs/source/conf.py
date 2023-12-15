@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
+project = 'Proxmox VE中文文档'
+copyright = '2023, Graziella'
 author = 'Graziella'
 
 release = '0.1'
@@ -17,6 +17,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    'recommonmark',
+    'sphinx_markdown_tables',
 ]
 
 intersphinx_mapping = {
@@ -29,7 +31,8 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'groundwork'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
