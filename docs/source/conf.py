@@ -31,8 +31,8 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-#html_theme = 'sphinx_rtd_theme'
-html_theme = 'groundwork'
+html_theme = 'sphinx_rtd_theme'
+#html_theme = 'groundwork' 这个主题好像不支持md文件
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
