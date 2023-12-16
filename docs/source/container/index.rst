@@ -6,8 +6,7 @@
    maxdepth: 2
    :titlesonly:
    :glob:
-
-
-   *
+   
+   :doc: ../2023/build_local_registry
 
 
