@@ -6,8 +6,8 @@
 
 .. toctree::
    :maxdepth: 1
+   :titlesonly:
+   :glob:
 
-   change_mstsc_port
-   proxy_for_shell
-   manage_kvm_mechin
-   build_local_registry
+   *
+
