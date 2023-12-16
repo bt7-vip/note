@@ -7,7 +7,8 @@
 
 Contents
 --------
-
 .. toctree::
+    :titlesonly:
+    :glob:
 
-   proxy_for_shell
+    *
