@@ -11,6 +11,8 @@ Contents
 
 .. toctree::
    :maxdeph: 1
+   :titlesonly:
+   :glob:
 
    2023/index.rst
    2024/index.rst
