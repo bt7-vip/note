@@ -1,3 +1,5 @@
+# baout
+
 ### 2023-12-15
 
 使用sphinx项目，根据[模板](https://github.com/readthedocs/tutorial-template)，创建的Blog框架，使用readthedocs，将web展示。
