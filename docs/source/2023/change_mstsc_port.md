@@ -1,5 +1,8 @@
 # windows快速修改远程桌面端口
 
+这是一个powershell脚本，设置端口变量的端口侯，执行脚本，即可更改本机的mstsc端口
+
+
 ```powershell
 $portvalue = 53892
 
