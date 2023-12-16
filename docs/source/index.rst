@@ -10,7 +10,7 @@ Contents
 --------
 
 .. toctree::
-   maxdeph: 1
+   :maxdeph: 1
 
    2023/index.rst
    2024/index.rst
