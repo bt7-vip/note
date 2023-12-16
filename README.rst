@@ -1,9 +1,9 @@
-Template for the Read the Docs tutorial
+这是一个通过模板，构建的blog系统
 =======================================
+借助模板，使用sphinx，通过github托管，readthedocs构建的blog系统
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+http://hjg-blog.readthedocs.io/
 
-Read the tutorial here:
+or
 
-https://docs.readthedocs.io/en/stable/tutorial/
+http://hjg-blog.rtfd.io/
