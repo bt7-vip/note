@@ -10,4 +10,4 @@ Contents
 
 .. toctree::
 
-   为shell使用代理
+   proxy_for_shell
