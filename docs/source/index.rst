@@ -14,5 +14,6 @@ Contents
    :titlesonly:
    :glob:
 
+   container/index
    2023/index.rst
    2024/index.rst
