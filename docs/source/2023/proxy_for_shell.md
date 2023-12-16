@@ -13,7 +13,7 @@ socks5	IP port
 
 如：
 
-```shell
+```
 sudo proxychains4  dnf update -y
 proxychains4 sudo dnf update -y
 ```
