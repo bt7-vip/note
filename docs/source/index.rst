@@ -4,13 +4,12 @@
 .. image:: index.jpeg
 .. note::
 
-   This project is under active development.
+   个人Blog项目。
 
 Contents
 --------
 
 .. toctree::
-   maxdepth: 3
 
-   usage
+   2023/index
    about
