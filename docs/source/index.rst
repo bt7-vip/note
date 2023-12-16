@@ -11,5 +11,5 @@ Contents
 
 .. toctree::
 
-   2023/proxy_for_shell
+   2023/index
    about
