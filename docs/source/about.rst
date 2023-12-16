@@ -1,11 +1,6 @@
-<<<<<<< HEAD:docs/source/about.rst
 About
 ===
-=======
-# baout
 
-### 2023-12-15
->>>>>>> ffe44176b3671bea9747c5baa36114a39db9e7b1:docs/source/about.md
 
 **2023-12-15**
 
