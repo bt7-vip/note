@@ -11,4 +11,5 @@ Contents
 
 .. toctree::
 
-   *
+   proxy_for_shell
+
