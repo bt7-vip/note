@@ -10,7 +10,7 @@ Contents
 --------
 
 .. toctree::
-   :maxdeph: 1
+   :maxdeph: 2
    :titlesonly:
    :glob:
 
