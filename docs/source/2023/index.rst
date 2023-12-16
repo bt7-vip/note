@@ -10,7 +10,5 @@ Contents
 
 
 .. toctree::
-   :titlesonly:
-   :glob:
 
    *
