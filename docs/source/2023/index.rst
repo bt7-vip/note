@@ -7,8 +7,10 @@
 
 Contents
 --------
-.. toctree::
-    :titlesonly:
-    :glob:
 
-    *
+
+.. toctree::
+   :titlesonly:
+   :glob:
+
+   *
