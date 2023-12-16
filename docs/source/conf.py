@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Proxmox VE中文文档'
-copyright = '2023, Graziella'
-author = 'Graziella'
+project = '两岸猿声谛不住，轻舟已过万重山'
+copyright = '2023, 佛让人'
+author = 'By HJG'
 
 release = '0.1'
 version = '0.1.0'
