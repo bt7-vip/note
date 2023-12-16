@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = '两岸猿声谛不住，轻舟已过万重山'
+project = '两岸猿声啼不住，轻舟已过万重山'
 copyright = '2023, 佛让人'
-author = 'By HJG'
+author = 'For HJG'
 
 release = '0.1'
 version = '0.1.0'
@@ -32,7 +32,7 @@ templates_path = ['_templates']
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
-#html_theme = 'groundwork' 这个主题好像不支持md文件
+#html_theme = 'groundwork'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
