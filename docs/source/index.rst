@@ -15,3 +15,5 @@ Contents
    :glob:
 
    container/index
+   pve/index
+   script/index
