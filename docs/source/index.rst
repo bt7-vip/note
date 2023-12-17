@@ -15,4 +15,3 @@ Contents
    :glob:
 
    container/index
-   2024/index.rst
