@@ -51,4 +51,6 @@ $systemctl status sshd
 ```
 
 不出意外的话，应该好了。
-
+[openssh-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/openssh-9.3p2-1.el8.bclinux.x86_64.rpm)
+[openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm)
+[openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm)
