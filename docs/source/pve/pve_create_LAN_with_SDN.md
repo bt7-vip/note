@@ -20,13 +20,13 @@
 
 ![image-20240204161324300](./typora-user-images/image-20240204161324300.png)
 
-dhcp一定要填，不然后面创建虚拟机时选你创建的zones会报错没有ip分配。
+DHCP一定要设置，不然后面创建虚拟机时选你创建的zones会报错没有ip分配。
 
 创建好后回到SDN，点击apply应用。
 
 ![image-20240204161628952](./typora-user-images/image-20240204161628952.png)
 
-等待几秒，status变未available，就可以在虚拟机添加网络使用了
+等待几秒，status变为available，就可以在虚拟机添加网络使用了
 
 ![image-20240204161905567](./typora-user-images/image-20240204161905567.png)
 
