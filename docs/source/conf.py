@@ -1,6 +1,7 @@
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information
+import sphinx_pdj_theme
 
 project = '两岸猿声啼不住，轻舟已过万重山'
 copyright = '2023, 佛让人'
@@ -31,7 +32,9 @@ templates_path = ['_templates']
 
 # -- Options for HTML output
 
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_pdj_theme'
+html_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
 #html_theme = 'groundwork'
 
 # -- Options for EPUB output
