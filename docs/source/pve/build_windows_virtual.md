@@ -6,11 +6,11 @@
 
 ### 创建虚拟机
 
-创建虚拟机，并选择启动镜像，添加[virtio-win驱动](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.240-1/virtio-win-0.1.240.iso)，不然安装时找不到硬盘。
+创建虚拟机，并选择启动镜像，添加[virtio-win驱动](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.240-1/virtio-win-0.1.240.iso)，在安装选择磁盘时，看不到硬盘的情况下，需要加载virtio-wim中的驱动后才能看到硬盘。
 
 ![image-20240314163057540](./typora-user-images/image-20240314163057540.png)
 
-设备类型选Q35
+设备类型选Q35,勾选qemu agent，这样在系统中安装驱动后，可以在pve的vm管理界面看到设备的ip等信息。
 
 ![image-20240314164355563](./typora-user-images/image-20240314164355563.png)
 
@@ -53,7 +53,7 @@ ata-WDC_WD40EJRX-89T1XY0_WD-WCC7K3VYH80D-part2
 
 其中`-part*`表示分区，不带`-part`为整块硬盘。举例：
 
-如果你原宿主机windows是安装在`ata-WDC_WD40EJRX-89T1XY0_WD-WCC7K3VYH80D`这块硬盘上，有C和D分区，那么查询出来就如上情况。加入创建的空白虚拟机ID101,那么根据一下命令，就可以映射到虚拟机中
+如果你原宿主机windows是安装在`ata-WDC_WD40EJRX-89T1XY0_WD-WCC7K3VYH80D`这块硬盘上，有C和D分区，那么查询出来的分区就如上情况。如果想将整个硬盘映射到虚拟机中，假如创建的空白虚拟机ID101,那么根据以下命令，就可以映射到虚拟机中
 
 ```
 qm set 101 -sata1 /dev/disk/by-id/ata-WDC_WD40EJRX-89T1XY0_WD-WCC7K3VYH80D
@@ -66,16 +66,20 @@ qm set 101 -sata1 /dev/disk/by-id/ata-Samsung_SSD_870_EVO_500GB_S6PZNM0W109333A-
 qm set 101 -sata2 /dev/disk/by-id/ata-WDC_WD40EJRX-89T1XY0_WD-WCC7K3VYH80D-part1
 ```
 
-这时，虚拟机会有两个硬盘下的两个分区。直通方面和方法1一样，没有区别。
+这时，虚拟机会有两个硬盘下的两个分区。这时在web管理界面就可以直接看到这两个分区已经直通到虚拟机中了。
 
 
 
 ## 3)灵活配置
 
-两种方式并非二选一，映射和创建全新系统可以同时存在，一下为我现在使用的方式
+两种方式并非二选一，映射和创建全新系统可以同时存在，以下为我现在使用的方式
 
 ![image-20240315165443558](./typora-user-images/image-20240315165443558.png)
 
 
 
 其中两个分区是原宿主机windows下的分区，两个sata通道的使用旧分区，很多文件在上面，不需要来回搬运文件，映射后直接使用。vm-101-disk-1.qcow2是新创建的磁盘安装系统。
+
+我使用这种方法，将工作用的设备进行了改造，显卡键鼠直通，稳定运行，并且在初期测试稳定性时，通过直通保留了旧系统一段时间，在遇到不稳定或有其他问题时，可以重启宿主机并快速切换至旧windows系统，不耽误工作。目前已经稳定运行2月时间，旧系统在转移文件后就可以清楚掉腾出空间了
+pve拓扑结构见[https://hjg-blog.readthedocs.io/en/latest/pve/use_pve_host.html]()
+
