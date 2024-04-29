@@ -78,4 +78,4 @@ dnf system-upgrade reboot
 
 升级很慢，需要耐心等待
 
-![image-20240429165210289](../typora-user-images/image-20240429165210289.png)
+![image-20240429165210289](./image-20240429165210289.png)
