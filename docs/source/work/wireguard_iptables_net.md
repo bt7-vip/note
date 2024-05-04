@@ -1,4 +1,4 @@
-# wireguard流量转发配置
+# 2024/4/29: wireguard流量转发配置
 
 在搭建过多个wireguard网络后，发现对iptables的理解还是很浅显，这里记录一下2个转发流量的iptables语句。便于参考
 

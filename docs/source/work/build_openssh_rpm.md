@@ -1,4 +1,4 @@
-# build openssh rpm包
+# 2024/1/6: build openssh rpm包
 
 有个rpm升级openssh，也得有打包方法，感谢openssh自带sepc文件。
 
