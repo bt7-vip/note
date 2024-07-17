@@ -1,4 +1,6 @@
-# 2024/5/10 使用rpmbuild 打包 openssh
+# 使用rpmbuild 打包 openssh
+
+time: 2024/5/10
 
 openssh源码自带spec文件，我们可以直接使用自带spec文件了解和学习打包流程。
 

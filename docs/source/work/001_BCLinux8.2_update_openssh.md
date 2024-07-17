@@ -1,4 +1,6 @@
-# 2024/1/6: BCLinux8.2 rpm包升级openssh
+# BCLinux8.2 rpm包升级openssh
+
+time: 2024/1/6
 
 工作中有大量设备需要升级openssh，将openssh打包成rpm，便于分发安装
 
