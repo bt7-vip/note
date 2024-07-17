@@ -1,8 +1,8 @@
-# 2024/07/17: coreDNS快速部署
+# 2024/07/17:  coreDNS快速部署
 
 在创建内网服务时，很多设备要指定ip和自定义域名，以及证书，避免每次每台都要修改hosts文件，现在在局域网部署coreDNS
 
-拓扑：
+### 拓扑：
 
 ```powershell
 #环境
@@ -10,12 +10,13 @@ ProxMox创建的虚拟环境
 使用SDN创建虚拟局域网，IP为192.168.200.10~200
 coreDNS ip为192.168.200.20，系统fedora 40 lxc
 在Datecenter》SDN》VNets》Subnets，编辑subnet的“DNS Zone Prefix:”为coreDNS的IP
-coreDNS系统：
+
 ```
 
-快速部署
+### 快速部署
 
 ```powershell
+## 以下操作在coreDNS设备上操作
 #关闭由系统自带的DNS服务
 systemctl stop systemd-resolved.service
 systemctl disable systemd-resolved
@@ -39,7 +40,7 @@ chown -R coredns /etc/coredns/Corefile
 
 ```
 
-创建systemd文件
+### 创建systemd文件
 
 ```powershell
 tee -a /usr/lib/systemd/system/coredns.service <<'EOF'
@@ -64,7 +65,7 @@ WantedBy=multi-user.target
 EOF
 ```
 
-创建配置文件
+### 创建配置文件
 
 ```powershell
 tee -a /etc/coredns/Corefile <<'EOF'
@@ -96,10 +97,10 @@ tee -a /etc/coredns/Corefile <<'EOF'
 EOF
 ```
 
-开启服务
+### 开启服务
 
 ```powershell
-#加载systemd
+#加载systemd && 开机启动 && 开启服务 && 查看服务状态
 systemctl daemon-reload && systemctl enable coredns && systemctl start coredns && systemctl status coredns
 ```
 
@@ -111,4 +112,6 @@ systemctl daemon-reload && systemctl enable coredns && systemctl start coredns &
 192.168.200.100 baidu.com
 ```
 
-在另外一台指定了DNS的设备直接ping这个域名，可以发现解析ip已经指向了指定ip，后续在添加其他服务时，只需要更新hosts文件即可。
+### 测试
+
+在其他设备测试DNS服务，在另外一台设备直接ping这个`baidu.com`域名，可以发现解析ip已经指向了指定ip，后续在添加其他服务时，只需要更新coreDNS中的``/etc/coredns/hosts``文件即可。
