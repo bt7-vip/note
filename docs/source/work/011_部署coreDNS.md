@@ -2,11 +2,11 @@
 
 time: 2024/07/17
 
-在创建内网服务时，很多设备要指定ip和自定义域名，以及证书，避免每次每台都要修改hosts文件，现在在局域网部署coreDNS
+在创建内网服务时，很多时候要指定ip和自定义域名，以及部署证书。为了避免每次每台都要修改hosts文件，现在在局域网部署coreDNS，用来为内网设备提供DNS服务。
 
 ### 拓扑：
 
-```powershell
+```shell
 #环境
 ProxMox创建的虚拟环境
 使用SDN创建虚拟局域网，IP为192.168.200.10~200
@@ -35,7 +35,7 @@ ln -s /usr/local/bin/coredns /usr/bin/coredns
 #创建运行用户
 useradd coredns -s /sbin/nologin
 #创建文件夹
-mkdir -vp /etc/coredns/
+mkdir -vp /etc/coredns
 touch /etc/coredns/Corefile
 touch /etc/coredns/hosts
 chown -R coredns /etc/coredns/Corefile
