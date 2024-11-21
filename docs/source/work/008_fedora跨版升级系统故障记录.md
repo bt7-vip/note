@@ -64,7 +64,7 @@ sudo rpm -qa | grep "edora-release-xfce-38-36.noarch"
 sudo dnf remove fedora-release-xfce-38-36
 ```
 
-在开始升级
+再次下载升级包
 
 ```shell
 sudo dnf system-upgrade download --releasever=40
