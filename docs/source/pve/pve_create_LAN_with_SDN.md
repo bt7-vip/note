@@ -21,21 +21,21 @@ systemctl disable --now dnsmasq
 
 在DataCenter》SDN》Zones创建一个simple网络，选中automatic DHCP自动分配网址
 
-![image-20240204161048777](../typora-user-images/image-20240204161048777.png)
+![image-20240204161048777](./typora-user-images/image-20240204161048777.png)
 
 ## 创建VNet
 
 在VNets创建一个Vnet，zone选择上面创建的simple
 
-![image-20240204161213828](../typora-user-images/image-20240204161213828.png)
+![image-20240204161213828](./typora-user-images/image-20240204161213828.png)
 
 ## 创建subnets
 
 选中创建好的vnet，s在subnets创建局域网的网段和dhcp范围，勾选SNAT使局域网可以连互联网。
 
-![image-20240204161310022](../typora-user-images/image-20240204161310022.png)
+![image-20240204161310022](./typora-user-images/image-20240204161310022.png)
 
-![image-20240204161324300](../typora-user-images/image-20240204161324300.png)
+![image-20240204161324300](./typora-user-images/image-20240204161324300.png)
 
 DHCP一定要设置，分配。
 
@@ -43,9 +43,9 @@ DHCP一定要设置，分配。
 
 创建好后回到SDN，点击apply应用。
 
-![image-20240204161628952](../typora-user-images/image-20240204161628952.png)
+![image-20240204161628952](./typora-user-images/image-20240204161628952.png)
 
 等待几秒，status变为available，就可以在虚拟机添加网络使用了
 
-![image-20240204161905567](../typora-user-images/image-20240204161905567.png)
+![image-20240204161905567](./typora-user-images/image-20240204161905567.png)
 
