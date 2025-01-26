@@ -40,7 +40,7 @@ $cp /etc/pam.d/sshd /etc/pam.d/sshd.bak
 $ sudo yum localinstall openssh-9.3p2-1.el8.bclinux.x86_64.rpm openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm
 ```
 
-![image-20240106175557690](image-20240106175557690.png)
+![image-20240106175557690](./typora-user-images/image-20240106175557690.png)
 
 ## 恢复文件权限
 
@@ -50,7 +50,7 @@ $ sudo yum localinstall openssh-9.3p2-1.el8.bclinux.x86_64.rpm openssh-clients-9
 $systemctl status sshd
 ```
 
-![image-20240106175814682](image-20240106175814682.png)
+![image-20240106175814682](./typora-user-images/image-20240106175814682.png)
 
 是权限太大了，修改权限后，重启sshd
 
