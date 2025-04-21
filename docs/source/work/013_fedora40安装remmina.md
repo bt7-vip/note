@@ -57,4 +57,18 @@ sudo dnf install 'remmina*'
 
 desktop是fedora40-xfce，安装后远程windows正常使用。
 
+## 5：共享文件夹
+
+对于无法通过复制粘贴来传送文件的问题，只能通过共享文件夹来解决
+
+在配置页面，有个共享文件夹，编写格式为：
+
+```shell
+name,path;
+# 示例
+sharedir,/home/usr/share;
+# 其中sharedir会在对端设备显示出来，
+# /home/usr/share为本地目录
+```
+
   之前安装软件的时候就遇到fedora无法安装epel源，不知道现在fedoar是怎么处理epel源的，明明epel是fedora在维护，结果自己的发行版无法简单顺利的使用源，有点魔幻。
