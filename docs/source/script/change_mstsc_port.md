@@ -1,6 +1,6 @@
 # windows快速修改远程桌面端口
 
-这是一个powershell脚本，设置端口变量后，执行脚本，即可更改本机的mstsc端口
+这是一个powershell命令，设置端口变量，执行命令，即可更改本机的mstsc端口
 
 
 ```powershell
