@@ -9,22 +9,34 @@ proxmox 8.4新增功能
 简单说就是将挂载到pve宿主机的存储，直接共享给vm虚拟机，不通过网络。虚拟机支持windows和linux，挂载后都可以直接进行读写。在集群层提供了文件存储的功能。
 ## 集群设置共享目录
 在Datacenter》Directory mappings添加共享的文件夹
+
 ![Pasted image 20251009215302.png](./typora-user-images/Pasted image 20251009215302.png)
+
 name：标签
+
 path：要共享的文件夹路径（宿主机路径）
+
 创建后会在页面显示文件结构
+
 ![Pasted image 20251009215645.png](./typora-user-images/Pasted image 20251009215645.png)
+
 ## 配置给虚拟机
 虚拟机关机后，在配置页面添加**Virtiofs**
+
 ![Pasted image 20251009215835.png](./typora-user-images/Pasted image 20251009215835.png)
+
 在对话框中选择刚刚在集群创建的共享标签
+
 ![Pasted image 20251009215949.png](./typora-user-images/Pasted image 20251009215949.png)
+
 ![Pasted image 20251009220004.png](./typora-user-images/Pasted image 20251009220004.png)
+
 开机进入vm虚拟机系统
 ## 在系统中挂载
 ### windows系统
 
 安装 VirtIO-FS 驱动，这个驱动包含在**virtio-win**驱动包中安装过的可以跳过
+
 1. vm中下载并挂载最新的 VirtIO ISO 镜像。
 2. 运行**Virtio-win-guest-tools.exe**安装驱动
 3. 验证驱动：打开 PowerShell，运行：
