@@ -45,7 +45,7 @@ Get-Service VirtioFsDrv
 Get-PnpDevice | Where { $_.FriendlyName -like "*VirtioFS*" -or $_.FriendlyName -like "*Virtio FS*" }
 ```
 如果是未运行，检查服务**Virtio-fs Service**并设置为运行，并配置为自动运行。
-![Pasted image 20251009220858.png](./typora-user-images/Pasted image 20251009220858.png)
+![Pasted image 20251009220858.png](./typora-user-images/Pasted-image-20251009220858.png)
 安装 WinFSP 工具：
 1. 从 https://github.com/winfsp/winfsp/releases 下载最新版,并安装。WinFSP 用于将 VirtIO-FS 暴露为 Windows 驱动器。
 2. 在 PowerShell 中重启 VirtIO-FS 服务，注意挂载使用Z盘符，保证盘符未被占用：
