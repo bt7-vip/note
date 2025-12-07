@@ -50,7 +50,7 @@ sudo rpm-ostree  install ibus-rime tmux xrdp
 sudo rpm-ostree override remove noopenh264 --install openh264 --install mozilla-openh264
 ```
 #### - 配置ibus
-  - 默认安装的xfce是原版桌面，没有经过特定配适，与安装发行版的桌面有些不同。ibus已经安装，可以添加自己喜欢的输入法，这里以中州韵为例
+  - 默认安装的xfce是原版桌面，没有经过特定配适，与安装发行版的桌面有些不同。ibus上一步已经安装，可以添加自己喜欢的输入法，这里以中州韵为例
   - 前面已经安装了中州韵的输入法，启动ibus和开机启动守护程序
 ```shell
 # 手动后台运行守护程序，托盘可以看到图标
@@ -64,7 +64,7 @@ ibus-daemon -d
  - 配置开机启动
    Applications > Settings > Session and Startup > Application Autostart > Add 
    配置如下
-   ![[./typora-user-images/file-20251129221431716 1.png]]
+   ![](./typora-user-images/file-202511292214317161.png)
 #### - 配置Xrdp
  - 配置远程桌面服务
 ```shell
@@ -83,10 +83,6 @@ $ vi ~/.xsession
 # 強制將 D-Bus 指向 Systemd 管理的 Socket
 # 這讓 Podman 能找到正確的 systemd --user 實例
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
-
-# 導入其他的環境變數 (可選，但推薦)
-[ -f /etc/profile ] && . /etc/profile
-[ -f ~/.bashrc ] && . ~/.bashrc
 
 # 啟動 XFCE 桌面
 exec /usr/bin/startxfce4
@@ -133,7 +129,9 @@ sudo dnf install ibus ibus-rime
 ```
 
 - 下载[vscode安装包](https://code.visualstudio.com/Download),根据容器的实际发行版下载对应的包
-**说明：** 值得注意的是，Toolbox创建的环境更像是开发环境容器化，文件和工具可以与系统共享访问，并且支持部署 GUI开发工具。
+```{note}
+值得注意的是，Toolbox创建的环境更像是开发环境容器化，文件和工具可以与系统共享访问，并且支持部署 GUI开发工具。
+```
 ```shell
 # 这里以fedora发行版为例
 # 下载的rpm包在Downloads文件夹下
@@ -150,7 +148,7 @@ code
 cp /usr/share/applications/code.desktop ~/Desktop/
 ```
  准备一个vscode的ico文件，在桌面选中后编辑，icon选刚刚的图片, 启动命令`toolbox run -c fedora-toolbox-43 code` 其中`-c` 参数指定了容器名称，**这里的容器名称建议使用容器ID**,以确保其唯一性和稳定性，另外的原因是容器名可以随时修改，ID查看方式为`toolbox list`命令, 会列出当前镜像和容器。
- ![](./typora-user-images/file-20251129221431716%202.png)
+ ![](./typora-user-images/file-202511292214317162.png)
 保存后，双击运行测试运行是否正常。
 在配置中文界面时可能会遇到字体是方块，在容器中安装中文字体
 ```shell
@@ -171,7 +169,7 @@ flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flath
   等待安装完成，文件真的很大
 ### 2. 日常软件配置
 #### - Obsidian
-对于常用软件，没有严重BUG就使用固定版，这里Obsidian使用appimages打包的版本。在Xwaylay环境有严重BUG，白板无法拖动，需要在X11环境运行。
+对于常用软件，没有严重BUG就使用固定版，这里Obsidian使用appimages打包的版本。Obsidian在Xwaylay环境有严重BUG，白板无法拖动，需要在X11环境运行,并且xfce在X11运行。
 -  下载软件包[Download](https://obsidian.md/)和[图标](https://obsidian.md/images/obsidian-logo-gradient.svg)
 - 创建一个文件夹放置软件包和图标，并将软件包配置运行权限。
 - 桌面空白处右键> create launcher
