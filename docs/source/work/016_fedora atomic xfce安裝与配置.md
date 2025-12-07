@@ -63,7 +63,8 @@ ibus-daemon -d
 
  - 配置开机启动
    Applications > Settings > Session and Startup > Application Autostart > Add 
-   配置如下
+   配置如图
+   
    ![](./typora-user-images/file-202511292214317161.png)
 #### - 配置Xrdp
  - 配置远程桌面服务
