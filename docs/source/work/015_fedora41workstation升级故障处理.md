@@ -58,7 +58,7 @@ sudo dnf install mesa-filesystem-24.2.4-1.fc41.x86_64
 
 ![image-20250122155220815](./typora-user-images/image-20250122155220815.png)
 
-##### Tips
+ ..note::
 
   如果像我一样进入字符界面不方便，并且需要反复重启机器验证，可以将默认启动方式改为字符界面，确保系统可以正常启动
 
