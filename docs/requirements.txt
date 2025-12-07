@@ -1,6 +1,7 @@
-sphinx==7.1.2
+sphinx
 sphinx-pdj-theme
-sphinx-rtd-theme==2.0.0
-recommonmark>=0.7.1
-sphinx_markdown_tables>=0.0.17
-groundwork_sphinx_theme>=1.1.1
+sphinx-rtd-theme
+recommonmark
+sphinx_markdown_tables
+groundwork_sphinx_theme
+myst-parser

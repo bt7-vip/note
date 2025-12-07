@@ -4,7 +4,7 @@
 #import sphinx_pdj_theme
 
 project = '两岸猿声啼不住，轻舟已过万重山'
-copyright = '2023, 佛让人'
+copyright = '2026'
 author = 'For HJG'
 
 release = '0.1'
@@ -20,6 +20,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'recommonmark',
     'sphinx_markdown_tables',
+    'myst_parser'
 ]
 
 intersphinx_mapping = {
