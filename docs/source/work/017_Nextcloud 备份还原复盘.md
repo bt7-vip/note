@@ -1,8 +1,9 @@
 ##  Nextcloud 备份还原复盘
 
 ```{note}
-也许你会疑惑，一个备份还原怎么还需要复盘
-  我确认我需要复盘，因为这件事我花了三天才做完。这是痛苦的三天，直到我编写复盘文档时，还在跑还原
+也许你会疑惑，一个备份还原怎么还需要复盘。
+
+我确认我需要复盘，因为这件事我花了三天才做完。这是痛苦的三天，直到我编写复盘文档时，还在跑还原
 ```
 ###  起因
 
@@ -56,7 +57,7 @@ vnc提供的ssh是rsa，新的发行版有些不在支持rsa，在创建vnc连�
 ###  新系统部署nextcloud
 
 安装fail2ban，配置防火墙，安装dokcer，为了避免麻烦，这次使用root运行的doker
-其实已经运行了一个redhat 10虚拟机，但是在这个系统上没有成功运行fail2ban，暂时放在那让别人扫了。%% 所以我又换了fedora %%。
+其实已经运行了一个redhat 10虚拟机，但是在这个系统上没有成功运行fail2ban，暂时放在那让别人扫了。所以我又换了fedora。
 
 根据ai的建议，首先部署nextcloud aio
 ```shell
@@ -70,11 +71,11 @@ sudo docker run --init --sig-proxy=false --name nextcloud-aio-mastercontainer --
 ```shell
  ssh -i id_ed25519 -L 8080:localhost:8080 user@ip -p 端口
 ```
-这样本地浏览器就可以打开`https://127.0.0.1:8080`来管理
+这样本地浏览器就可以打开`https://127.0.0.1:8080`来管理。
+
 第一次打开会给你密码，记住密码，进入后不要验证域名，那样会进入新nextcloud部署，选择下面的从备份恢复。
 
-
-这里需要在新宿主机安装borgbackup工具，配置新到旧实例的免密，然后用borg测试备份是否正确识别到,备份目录权限建议777,恢复后删除旧实例备份。
+使用borg还原备份，我先在新宿主机安装borgbackup工具，配置新到旧实例的免密，然后用borg测试备份是否正确识别到,备份目录权限建议777,恢复后删除旧实例备份。
 ```shell
 borg list --format '{archive}{NL}' ssh://usr@ip:port/mnt/backup1/borg/
 ```
