@@ -21,11 +21,11 @@ OpenSSH_8.0p1, OpenSSL 1.1.1c FIPS  28 May 2019
 
 ## 上传rpm包
 
-[openssh-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/openssh-9.3p2-1.el8.bclinux.x86_64.rpm)
+[openssh-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/typora-user-images/openssh-9.3p2-1.el8.bclinux.x86_64.rpm)
 
-[openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm)
+[openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/typora-user-images/openssh-clients-9.3p2-1.el8.bclinux.x86_64.rpm)
 
-[openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm)
+[openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm](https://github.com/bt7-vip/note/blob/main/docs/source/work/typora-user-images/openssh-server-9.3p2-1.el8.bclinux.x86_64.rpm)
 
 
 ## 备份文件
