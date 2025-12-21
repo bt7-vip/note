@@ -24,11 +24,11 @@ export XMODIFIERS=@im=ibus
 ```
 
 到测试这里输入中文已经正常。结论是：
-```{note}
-问题的核心是 WeChat AppImage 在启动时没有正确继承或识别系统的输入法环境变量配置
-```
 
-修复的话就在桌面图标配置变量参数
+问题的核心是 WeChat AppImage 在启动时没有正确继承或识别系统的输入法环境变量配置
+
+
+修复的话就修改桌面图标配置变量参数
 ```vi
 env GTK_IM_MODULE=ibus QT_IM_MODULE=ibus XMODIFIERS=@im=ibus "AppImage Path"
 ```
